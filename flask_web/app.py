@@ -2,11 +2,12 @@
 # Template base flask web app
 
 from flask import Flask
-app = Flask(__name__)
+app = Flask(__name__) # create an instance in python
 
-@app.route('/')
-def hello_world():
+@app.route('/') # route called by user
+
+def hello_world(): # function called by '/' route
     return 'Hey, we have Flask in a container!'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8000)
